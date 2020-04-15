@@ -1,0 +1,195 @@
+
+body{
+    user-select: none;    
+}
+.wrapper{
+    margin: 0 auto;
+    max-width: 1020px;
+    width: 100%;
+}
+
+.field{
+    font-size:24px;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    display: grid;
+    max-width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;  
+    width: 40vw;
+    height: 40vw;
+    background-color: bisque;
+    grid-gap: 1vw;
+    padding: 1vh;   
+}
+
+.f9{
+  font-weight: bold;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;  
+  width: 40vw;
+  height: 40vw; 
+}
+
+.f25{
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;  
+  width: 40vw;
+  height: 40vw; 
+}
+
+.f36{
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;  
+  width: 40vw;
+  height: 40vw;   
+}
+
+.f49{
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;  
+  width: 40vw;
+  height: 40vw;       
+}
+
+.f64{
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;  
+  width: 40vw;
+  height: 40vw;   
+}
+
+.number{
+    display: flex;
+    position: relative;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center; 
+    min-width: 0;
+    min-height: 0;
+    font-size: 3vw;
+}
+
+.run-animation {
+    animation: animation-image 1s; 
+  }
+
+button{
+  border-radius: 30%;
+    width: 100px;
+    height: 30px;
+}
+
+.quantity-elements{
+    margin: 0;
+    display: block;
+    width: 90vw;
+    height: 5vh;
+}
+
+.quantity-elements span{
+    margin-left: 1vw;
+    cursor: pointer;
+}
+.counter {
+    margin: 0;
+    padding: 0;
+    width: 90vw;
+    height: 5vh;
+    display: block;
+}
+
+.counter p{
+    margin: 0;
+}
+
+.seconds-hiden{
+  display: none;
+}
+
+@keyframes animation-image {
+    from {
+      -webkit-transform: perspective(800px) scale3d(1, 1, 1) translate3d(0, 0, 0)
+        rotate3d(0, 1, 0, -360deg);
+      transform: perspective(800px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -360deg);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+  
+    40% {
+      -webkit-transform: perspective(800px) scale3d(1, 1, 1) translate3d(0, 0, 150px)
+        rotate3d(0, 1, 0, -190deg);
+      transform: perspective(800px) scale3d(1, 1, 1) translate3d(0, 0, 150px)
+        rotate3d(0, 1, 0, -190deg);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+  
+    50% {
+      -webkit-transform: perspective(800px) scale3d(1, 1, 1) translate3d(0, 0, 150px)
+        rotate3d(0, 1, 0, -170deg);
+      transform: perspective(800px) scale3d(1, 1, 1) translate3d(0, 0, 150px)
+        rotate3d(0, 1, 0, -170deg);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+  
+    80% {
+      -webkit-transform: perspective(800px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0)
+        rotate3d(0, 1, 0, 0deg) ;
+      transform: perspective(800px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0)
+        rotate3d(0, 1, 0, 0deg);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+  
+    to {
+      -webkit-transform: perspective(800px) scale3d(1, 1, 1) translate3d(0, 0, 0)
+        rotate3d(0, 1, 0, 0deg);
+      transform: perspective(800px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+  }
+
+  @keyframes fade {
+    0% {
+      opacity: 0%; }
+    100% {
+      opacity: 100%; } }
+/*
+@media (max-width: 560px){
+  .field{
+    
+  }
+}
+
+@media (max-width: 400px){
+  .field{
+    
+  }
+}
+*/
+#message-block,
+#result{
+  display: none;
+  font-family: 'LatoRegular',sans-serif;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  text-align: center;
+  z-index: 1000;
+}
+
+#message-block.post__message{
+  display: block;
+}
+
+.message-text{
+  width: 100%;
+}
